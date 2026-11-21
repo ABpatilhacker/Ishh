@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fff2ed">
+<title>For Ishuu, with love ♡</title>
+<style>
+:root{--wine:#72283f;--pink:#c85d79;--peach:#fff2ed;--paper:#fffaf7;--ink:#351b27;--soft:#845d69;--gold:#e9ba73;--line:#ead8d7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--peach);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #d17b92;outline-offset:4px}
+[hidden]{display:none!important}
+.topbar{position:absolute;inset:0 0 auto;z-index:3;display:flex;justify-content:flex-end;padding:18px max(20px,calc((100vw - 1120px)/2))}
+.music{border:1px solid #ffffff99;border-radius:99px;padding:9px 15px;color:white;background:#64263b8c;backdrop-filter:blur(8px);font-size:.88rem}
+.hero{position:relative;min-height:min(780px,100svh);display:grid;align-items:center;overflow:hidden;color:#fff8f4;background:radial-gradient(ellipse at 80% 55%,#a54b65 0%,#682b45 30%,transparent 64%),linear-gradient(125deg,#32151e,#471a30 70%,#6b2843)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 33%,#ffe2d51a 1px,transparent 2px),radial-gradient(circle at 87% 71%,#ffe2d51c 1px,transparent 2px);background-size:70px 70px,95px 95px}
+.hero::after{content:"♡";position:absolute;right:8%;top:50%;transform:translateY(-50%) rotate(-12deg);font:clamp(15rem,42vw,36rem)/.8 Georgia,serif;color:#ffbdc42e}
+.wrap{width:min(1060px,calc(100% - 40px));margin-inline:auto}
+.hero-content{position:relative;z-index:1;width:min(690px,100%);padding:110px 0 72px}
+.kicker{text-transform:uppercase;letter-spacing:.17em;font-weight:750;font-size:.74rem;color:#f5d5bc}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.07;margin:0;text-wrap:balance}
+h1{font-size:clamp(3.4rem,9vw,7rem);letter-spacing:-.055em}
+h1 em,h2 em{font-weight:400;color:#f3b8c4}
+.hero p{max-width:450px;color:#ffebdf;font-size:1.08rem;margin:20px 0 25px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:11px 21px;border:0;border-radius:99px;background:var(--wine);color:white;text-decoration:none;font-weight:720;transition:transform .18s,filter .18s}
+.button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.button.light{background:#fffaf7;color:var(--wine)}
+.hero .button{background:#f5c8c5;color:#401b2c}
+.hero-note{font-size:.88rem!important;color:#f6ded8!important;margin:15px 0 0!important}
+.section{padding:clamp(60px,9vw,105px) 0}
+.title{font-size:clamp(2.5rem,6vw,4.4rem);letter-spacing:-.04em}
+.intro{text-align:center}
+.intro .title em,.future-title em{color:var(--pink)}
+.intro-copy{max-width:590px;margin:14px auto 28px;color:var(--soft)}
+.portraits{display:flex;justify-content:center;align-items:center;gap:14px;margin:0 auto 22px}
+.portraits figure{margin:0;width:96px;height:96px;border-radius:50%;padding:4px;background:#fff;border:1px solid var(--gold);box-shadow:0 9px 22px #5325391b}
+.portraits img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.portraits span{color:var(--pink);font-size:1.5rem}
+.story-area{background:#fffaf7;border-block:1px solid var(--line)}
+.story-wrap{max-width:760px}
+.story-head{text-align:center;margin-bottom:28px}
+.story-head .title{font-size:clamp(2.35rem,6vw,4rem)}
+.story-head p{color:var(--soft);margin:12px auto 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 50px #55263b12}
+.progress-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px;color:var(--soft);font-weight:680;font-size:.9rem}
+.track{height:7px;flex:1;max-width:180px;border-radius:20px;background:#f2e7e4;overflow:hidden}
+.track span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#bd5673,#e7b981);transition:width .35s}
+.question{font-size:clamp(1.8rem,5vw,3.1rem);text-align:center;color:var(--wine)}
+.scene{margin-top:24px}
+.scene-image{width:100%;max-height:560px;object-fit:cover;border-radius:18px;display:block;background:#f6e5df}
+.scene-caption{text-align:center;color:var(--soft);font-size:1rem;margin:12px 0 17px}
+.action-row{text-align:center;margin-top:24px;min-height:50px}
+.end{padding:75px 0 90px;text-align:center;color:white;background:radial-gradient(ellipse at 50% 100%,#8f4255,#421c30 60%,#321522)}
+.end .title{font-size:clamp(2.9rem,7vw,5.3rem)}
+.end .title em{color:#f3b8c4}
+.end p{color:#f8dce1;max-width:500px;margin:16px auto 24px}
+footer{text-align:center;background:#321522;color:#f6dfe1;padding:18px;font-size:.9rem}
+#confetti{position:fixed;z-index:10;inset:0;pointer-events:none;overflow:hidden}
+#confetti span{position:absolute;top:-24px;left:var(--x);color:var(--c);font-size:var(--s);animation:fall var(--t) var(--d) ease-in forwards}
+@keyframes fall{to{transform:translate(var(--drift),calc(100vh + 36px)) rotate(540deg)}}
+@media(max-width:660px){
+ .hero{min-height:690px;min-height:88svh}
+ .hero-content{padding-top:110px}
+ .wrap{width:min(100% - 30px,1060px)}
+ .card{border-radius:20px}
+ .scene-image{max-height:65vh}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><button class="music" id="music" type="button" aria-pressed="false">♫ Play music</button></div>
+<header class="hero">
+  <div class="wrap hero-content">
+    <span class="kicker">A little dream for us</span>
+    <h1>Hey, <em>Ishuu.</em></h1>
+    <p>I made this with our photos… and a few little dreams for our future. Ready?</p>
+    <a class="button" href="#hello">Open your surprise <span aria-hidden="true">♡</span></a>
+    <p class="hero-note">Tap the button for a soft tune ♫</p>
+  </div>
+</header>
+<main>
+  <section class="section intro" id="hello">
+    <div class="wrap">
+      <span class="kicker" style="color:#a8586d">From Anmol, with love</span>
+      <h2 class="title">My favorite person is <em>you.</em></h2>
+      <p class="intro-copy">Here’s us today. Next, I have a few little dreams to show you, one by one. ♡</p>
+      <div class="portraits" aria-label="Anmol and Ishuu">
+        <figure><img src="assets/anmol-photo.webp" alt="Anmol"></figure><span aria-hidden="true">♡</span>
+        <figure><img src="assets/ishuu-photo-1.webp" alt="Ishuu"></figure>
+      </div>
+      <a href="#story" class="button">Start our story ↓</a>
+    </div>
+  </section>
+  <section class="section story-area" id="story">
+    <div class="wrap story-wrap">
+      <div class="story-head">
+        <span class="kicker" style="color:#a8586d">Our little future story</span>
+        <h2 class="title">One picture at a <em>time.</em></h2>
+        <p>Read the little line, then tap to see the picture 💗</p>
+      </div>
+      <div class="card">
+        <div class="progress-row"><span id="step-label">Dream 1 of 16</span><div class="track" aria-hidden="true"><span id="progress"></span></div></div>
+        <h3 id="prompt" class="question" tabindex="-1"></h3>
+        <div id="scene" class="scene" hidden>
+          <img id="scene-image" class="scene-image" alt="">
+          <p id="scene-caption" class="scene-caption"></p>
+        </div>
+        <div class="action-row"><button id="action" class="button" type="button">Tap to see ♡</button></div>
+      </div>
+      <noscript><p>This surprise needs JavaScript. You can still see our photos in the assets folder.</p></noscript>
+    </div>
+  </section>
+  <section class="end" id="end" hidden>
+    <div class="wrap">
+      <span class="kicker">The end… for now</span>
+      <h2 class="title">I love you, <em>Ishuu.</em></h2>
+      <p>My biggest dream is simple: lots of laughs, little trips, warm hugs, and you by my side.</p>
+      <button id="final-button" class="button light" type="button">One last surprise ✨</button>
+      <p id="final-message" hidden>One big hug is waiting for you. Come claim it 💗</p>
+    </div>
+  </section>
+</main>
+<footer>Made with love by Anmol ♡</footer>
+<div id="confetti" aria-hidden="true"></div>
+<script>
+const dreams=[
+ {line:'I have a little question… Will you marry me someday?',image:'future-proposal.webp',caption:'I hope we get to make this dream real one day. 💍'},
+ {line:'And after that… our wedding day together.',image:'future-wedding.webp',caption:'You and me, smiling all day. ♡'},
+ {line:'What will I ask you for every day?',image:'future-hug.webp',caption:'One long hug from my favorite person.'},
+ {line:'A quiet tea date with you?',image:'future-love-tea.webp',caption:'Tea, talks, and your smile. ☕'},
+ {line:'How about a candlelight date?',image:'future-candlelight-date.webp',caption:'A little dinner, a lot of love. 🕯️'},
+ {line:'A garden walk, holding hands?',image:'future-garden-hands.webp',caption:'Your hand is my favorite place to hold.'},
+ {line:'Will you dance with me?',image:'future-slow-dance.webp',caption:'Just one song… maybe five. 💃'},
+ {line:'What about a rainy day together?',image:'future-rain-umbrella.webp',caption:'One umbrella, two silly smiles. ☔'},
+ {line:'Our first big trip… Switzerland?',image:'future-swiss-trip.webp',caption:'You, me, and those beautiful mountains. 🇨🇭'},
+ {line:'Shall we see Paris together?',image:'future-paris.webp',caption:'A little walk by the Eiffel Tower with you. 🗼'},
+ {line:'And visit the Taj Mahal?',image:'future-taj-mahal.webp',caption:'A famous place with my favorite person.'},
+ {line:'What about a Rome trip too?',image:'future-rome.webp',caption:'One day, let’s see the world together. ✈️'},
+ {line:'More hill trips and new memories?',image:'future-trip-hills.webp',caption:'Anywhere feels special when I’m with you. 🌿'},
+ {line:'Maybe one tiny travel buddy someday?',image:'future-swiss-lake-baby.webp',caption:'A little family trip in our someday dream. 👶'},
+ {line:'Or a girl and a boy in our family?',image:'future-twins.webp',caption:'Two little smiles in this just-for-fun dream. 🧸'},
+ {line:'And at the end of every day…',image:'future-forehead-kiss.webp',caption:'I still want to be right there beside you. ♡'}
+];
+let index=0,revealed=false;
+const $=id=>document.getElementById(id);
+function showDream(){
+ const item=dreams[index];revealed=false;
+ $('step-label').textContent='Dream '+(index+1)+' of '+dreams.length;
+ $('progress').style.width=((index+1)/dreams.length*100)+'%';
+ $('prompt').textContent=item.line;
+ $('scene').hidden=true;
+ $('scene-image').removeAttribute('src');
+ $('action').textContent='Tap to see ♡';
+}
+$('action').addEventListener('click',()=>{
+ if(!revealed){
+  const item=dreams[index];
+  $('scene-image').src='assets/'+item.image;
+  $('scene-image').alt=item.caption;
+  $('scene-caption').textContent=item.caption;
+  $('scene').hidden=false;
+  revealed=true;
+  $('action').textContent=index===dreams.length-1?'Finish our story ♡':'Next little dream →';
+  $('scene').scrollIntoView({behavior:'smooth',block:'nearest'});
+  return;
+ }
+ if(index<dreams.length-1){index++;showDream();$('prompt').focus();return;}
+ $('end').hidden=false;
+ $('end').scrollIntoView({behavior:'smooth'});
+ celebrate();
+});
+$('final-button').addEventListener('click',()=>{
+ $('final-message').hidden=false;
+ $('final-button').textContent='I love you, Ishuu ♡';
+ celebrate();
+});
+function celebrate(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const colors=['#f3a6b5','#f8d5a5','#fff1e8','#d47d91'];
+ const bits=Array.from({length:65},(_,i)=>{
+  const s=document.createElement('span');s.textContent=i%3?'♥':'✦';
+  s.style.setProperty('--x',Math.random()*100+'%');s.style.setProperty('--c',colors[i%colors.length]);
+  s.style.setProperty('--s',10+Math.random()*15+'px');s.style.setProperty('--t',1.8+Math.random()*1.8+'s');
+  s.style.setProperty('--d',Math.random()*.45+'s');s.style.setProperty('--drift',(Math.random()*140-70)+'px');
+  s.addEventListener('animationend',()=>s.remove(),{once:true});return s;
+ });
+ $('confetti').replaceChildren(...bits);
+}
+let audioContext=null,notesTimer=null,noteIndex=0;
+const melody=[261.63,329.63,392,329.63,293.66,349.23,440,349.23,261.63,329.63,392,523.25];
+function playNote(){
+ if(!audioContext)return;
+ const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+ osc.type='sine';osc.frequency.value=melody[noteIndex%melody.length];noteIndex++;
+ gain.gain.setValueAtTime(.0001,audioContext.currentTime);
+ gain.gain.exponentialRampToValueAtTime(.045,audioContext.currentTime+.06);
+ gain.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+.85);
+ osc.connect(gain);gain.connect(audioContext.destination);osc.start();osc.stop(audioContext.currentTime+.9);
+}
+$('music').addEventListener('click',async()=>{
+ if(!audioContext)audioContext=new(window.AudioContext||window.webkitAudioContext)();
+ if(audioContext.state==='suspended')await audioContext.resume();
+ const on=$('music').getAttribute('aria-pressed')!=='true';
+ $('music').setAttribute('aria-pressed',String(on));
+ $('music').textContent=on?'♫ Pause music':'♫ Play music';
+ if(on){playNote();notesTimer=setInterval(playNote,900);}
+ else{clearInterval(notesTimer);notesTimer=null;}
+});
+showDream();
+</script>
+</body>
+</html>
